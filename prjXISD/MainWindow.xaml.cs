@@ -131,5 +131,10 @@ namespace prjXISD
                     break;
             }
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            gridOrders.Visibility = Visibility.Visible;
+        }
     }
 }

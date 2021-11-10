@@ -12,14 +12,35 @@
         <DockPanel x:Name="dpnlMenu" LastChildFill="False" Margin="0,0,960,0" Background="#FF3E3E42">
             <Grid Width="320">
                 <Image Width="320" Margin="0,8,0,535" Source="/Copy of Dev (2).png"/>
-                <Button Content="Orders" HorizontalAlignment="Center" VerticalAlignment="Top" Height="40" Width="320" FontSize="20" Margin="0,185,0,0"/>
+                <Button x:Name="btnOrders" Content="Orders" HorizontalAlignment="Center" VerticalAlignment="Top" Height="40" Width="320" FontSize="20" Margin="0,185,0,0" Click="Button_Click"/>
                 <Button Content="Customers" HorizontalAlignment="Center" VerticalAlignment="Top" Height="40" Width="320" FontSize="20" Margin="0,225,0,0"/>
+                <Button Content="Trucks" HorizontalAlignment="Center" VerticalAlignment="Top" Height="40" Width="320" FontSize="20" Margin="0,265,0,0"/>
+                <Button Content="Drivers" HorizontalAlignment="Center" VerticalAlignment="Top" Height="40" Width="320" FontSize="20" Margin="0,305,0,0"/>
+                <Button Content="Timesheet" HorizontalAlignment="Center" VerticalAlignment="Top" Height="40" Width="320" FontSize="20" Margin="0,345,0,0"/>
+                <Button Content="Reporting" HorizontalAlignment="Center" VerticalAlignment="Top" Height="40" Width="320" FontSize="20" Margin="0,385,0,0"/>
+                <Button Content="Log Out" HorizontalAlignment="Center" VerticalAlignment="Top" Height="40" Width="320" FontSize="20" Margin="0,680,0,0"/>
+                <Button Content="Account Settings" HorizontalAlignment="Center" VerticalAlignment="Top" Height="40" Width="320" FontSize="20" Margin="0,635,0,0"/>
+                <Button Content="Users" HorizontalAlignment="Center" VerticalAlignment="Top" Height="40" Width="320" FontSize="20" Margin="0,590,0,0"/>
             </Grid>
         </DockPanel>
-        <!--Orders Grid-->
-        <Grid Name="gridOrders" Width="960" Margin="320, 0, 0, 0" Background="#FF292929">
-
+        <!--START Orders Grid-->
+        <Grid Visibility="Hidden" Name="gridOrders" Width="960" Margin="320, 0, 0, 0" Background="#FF292929">
+            <Label Content="Orders" HorizontalAlignment="Left" Margin="10,40,0,0" VerticalAlignment="Top" Foreground="White" FontSize="50"/>
+            <Label Content="Un-assigned Orders" HorizontalAlignment="Left" Margin="10,122,0,0" VerticalAlignment="Top" Foreground="White" FontSize="32"/>
+            <ScrollViewer Margin="10,180,650,100" Width="300">
+                <StackPanel/>
+            </ScrollViewer>
+            <ScrollViewer Margin="650,180,10,100" BorderBrush="White" BorderThickness="1,1,1,1" Width="300">
+                <StackPanel/>
+            </ScrollViewer>
+            <ScrollViewer Margin="330,180,330,100" BorderBrush="White" BorderThickness="1,1,1,1" Width="300">
+                <StackPanel/>
+            </ScrollViewer>
+            <Label Content="Assigned Orders" HorizontalAlignment="Left" Margin="330,122,0,0" VerticalAlignment="Top" Foreground="White" FontSize="32"/>
+            <Label Content="Complete Orders" HorizontalAlignment="Left" Margin="650,122,0,0" VerticalAlignment="Top" Foreground="White" FontSize="32"/>
+            <Button Content="Add an Order" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40" Width="320" FontSize="20" Margin="630,670,0,0"/>
         </Grid>
+        <!--END Orders Grid-->
         <!--Login/Register Grid-->
         <Grid Visibility="Hidden" Name="gridLoginRegister" Background="#FF252526">
             <Grid Margin="460,275,460,275" Background="#FF2D2D30">
